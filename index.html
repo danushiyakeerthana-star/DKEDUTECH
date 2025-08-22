@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DKEDU — Learn job‑ready skills (Limited‑time Offer)</title>
+  <meta name="description" content="DKEDU helps you master job‑ready skills with mentor‑led courses. Limited‑time launch offer inside.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="DKEDU — Learn job‑ready skills (Offer)">
+  <meta property="og:description" content="Outcome‑focused courses • Live mentors • Certificate">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0ea5e9">
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --brand:#0ea5e9; --brand2:#22c55e; --border:#1f2a44;
+      --shadow:0 10px 30px rgba(2,6,23,.3);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 90% -10%,rgba(34,197,94,.08),transparent),radial-gradient(1200px 600px at -10% 90%,rgba(14,165,233,.12),transparent),linear-gradient(180deg,#0b1220,#0b1220 60%,#0d1424);color:var(--text)}
+    a{color:inherit}
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    .btn{background:linear-gradient(90deg,var(--brand),var(--brand2));border:none;color:#001018;font-weight:800;padding:12px 18px;border-radius:14px;text-decoration:none;display:inline-flex;gap:8px;align-items:center;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.ghost{background:transparent;color:var(--text);border:1px solid #2b3a5c}
+    .tag{background:rgba(14,165,233,.12);color:#7dd3fc;border:1px solid #1e3a5f;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:800;letter-spacing:.3px;text-transform:uppercase}
+    header{position:sticky;top:0;z-index:40;border-bottom:1px solid var(--border);backdrop-filter:blur(8px);background:rgba(11,18,32,.7)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .brand .logo{height:28px;width:28px;border-radius:8px;background:linear-gradient(135deg,#22c55e,#0ea5e9)}
+    .links a{margin:0 10px;color:#b6c3e6;text-decoration:none;font-weight:600}
+    .links a:hover{color:#fff}
+
+    /* Sticky offer bar */
+    .offer{position:sticky;top:56px;z-index:35;background:linear-gradient(90deg,rgba(14,165,233,.18),rgba(34,197,94,.18));border-bottom:1px solid var(--border)}
+    .offer .inner{display:flex;gap:10px;align-items:center;justify-content:center;padding:8px 0;font-weight:700}
+    .offer .timer{display:inline-flex;gap:6px;align-items:center;background:#07101f;border:1px solid #123153;color:#7dd3fc;border-radius:999px;padding:4px 10px;font-size:12px}
+
+    /* Hero */
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px}
+    @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    .panel{background:linear-gradient(180deg,#0f172a,#0e1728);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
+    .hero .panel{padding:22px}
+    .hero h1{font-size:44px;line-height:1.05;margin:8px 0}
+    .accent{background:linear-gradient(90deg,#7dd3fc,#86efac);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .subtitle{color:#b6c3e6}
+    .points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 8px}
+    .point{display:flex;gap:8px;align-items:flex-start}
+    .point .tick{color:#86efac}
+
+    /* Social proof */
+    .logos{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;opacity:.85}
+    .logos .logo{height:38px;border-radius:10px;background:#0b1220;border:1px dashed #1f2a44;display:flex;align-items:center;justify-content:center;color:#7aa2d6;font-weight:800}
+    @media (max-width:900px){.logos{grid-template-columns:repeat(3,1fr)}}
+
+    /* Value stack */
+    .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+    @media (max-width:900px){.stack{grid-template-columns:1fr}}
+    .card{padding:18px}
+    .card h3{margin:0 0 6px}
+    .muted{color:#9fb0d1}
+
+    /* Pricing */
+    .pricing{padding:32px 0}
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:900px){.prices{grid-template-columns:1fr}}
+    .price{position:relative}
+    .ribbon{position:absolute;right:12px;top:12px;background:#22c55e;color:#001018;font-size:12px;font-weight:900;border-radius:8px;padding:4px 8px}
+    .price .amt{font-size:36px;font-weight:900;margin:8px 0}
+    .bullets{list-style:none;padding:0;margin:0}
+    .bullets li{margin:8px 0;display:flex;gap:8px}
+
+    /* CTA band */
+    .cta-band{margin:32px 0}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px}
+    @media (max-width:900px){.cta-inner{flex-direction:column;align-items:flex-start}}
+
+    /* Testimonials slider */
+    .slider{position:relative;overflow:hidden;border-radius:20px}
+    .slides{display:flex;transition:transform .6s ease}
+    .testi{min-width:100%;padding:24px}
+
+    /* FAQ */
+    details{background:#0c1528;border:1px solid var(--border);border-radius:14px;padding:12px;margin:10px 0}
+    summary{cursor:pointer;font-weight:800;color:#d1e3ff}
+
+    /* Footer & sticky bottom bar */
+    footer{border-top:1px solid var(--border);margin-top:36px;padding:28px 0;color:#9fb0d1}
+    .stickybar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(1120px,94%);background:#091120;border:1px solid #183055;border-radius:16px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px}
+    @media (max-width:700px){.stickybar{flex-direction:column;align-items:flex-start}}
+    .online{display:inline-flex;align-items:center;gap:8px;border:1px solid #23507b;background:#0a1a2e;color:#93c5fd;border-radius:999px;padding:6px 10px;font-size:12px}
+    .dot{height:8px;width:8px;background:#22c55e;border-radius:999px;box-shadow:0 0 0 6px rgba(34,197,94,.12)}
+
+    /* Modal */
+    .modal{position:fixed;inset:0;background:rgba(2,6,23,.6);display:none;align-items:center;justify-content:center;padding:16px}
+    .modal .box{background:#0f1a31;border:1px solid #1f3156;border-radius:18px;max-width:560px;width:100%;padding:18px}
+    .close{background:transparent;border:1px solid #355184;color:#9fb0d1;border-radius:10px;padding:6px 10px}
+    input,select,textarea{width:100%;background:#0a1326;color:#dbeafe;border:1px solid #1f3156;border-radius:12px;padding:10px;font:inherit}
+    label{font-weight:700;font-size:12px;color:#9fb0d1}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"DKEDU",
+    "url":"https://dkedu.example",
+    "sameAs":["https://desk.zoho.com/portal/dkedu"],
+    "logo":"https://dkedu.example/logo.png"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><div class="logo"></div> DKEDU</div>
+      <nav class="links" aria-label="Primary">
+        <a href="#courses">Courses</a>
+        <a href="#why">Why DKEDU</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span id="clock" class="tag" title="India Standard Time">IST — --:--</span>
+        <a class="btn ghost" href="https://desk.zoho.com/portal/dkedu" target="_blank" rel="noreferrer">Support</a>
+        <a class="btn" href="#enroll">Enroll Now →</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="offer">
+    <div class="inner container">
+      <span>🎉 Launch Offer ends in</span>
+      <span class="timer" id="countdown">00d : 00h : 00m : 00s</span>
+      <span>Use coupon <b>DKEDU20</b> on checkout</span>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="tag">Mentor‑led • Certificate • Job‑ready</span>
+        <h1>Learn job‑ready skills — <span class="accent">fast</span>.</h1>
+        <p class="subtitle">Short, outcomes‑first programs with weekly mentor hours and interview prep. Built for busy people in India.</p>
+        <div class="points">
+          <div class="point"><span class="tick">✔</span><span>Hands‑on projects you can show recruiters</span></div>
+          <div class="point"><span class="tick">✔</span><span>Live mentor support (Mon–Sat, 09:00–18:00 IST)</span></div>
+          <div class="point"><span class="tick">✔</span><span>Certificate on completion</span></div>
+          <div class="point"><span class="tick">✔</span><span>Flexible cohort schedules</span></div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn" href="#pricing">See Plans</a>
+          <button class="btn ghost" id="openLead">Get Syllabus PDF</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="tag">Next cohort starts</div>
+        <h3 id="cohortDate" style="margin:8px 0 4px">—</h3>
+        <p class="muted">Seats left: <b id="seats">—</b> • Support: <span id="supportBadge" class="online"><span class="dot"></span><span>Checking…</span></span></p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px">
+          <div class="panel card"><h3>AI Fundamentals</h3><p class="muted">Prompts, ML basics, ethics</p></div>
+          <div class="panel card"><h3>Data Science</h3><p class="muted">Pandas, EDA, sk‑learn</p></div>
+          <div class="panel card"><h3>Digital Marketing</h3><p class="muted">SEO, Ads, Analytics</p></div>
+          <div class="panel card"><h3>UI/UX</h3><p class="muted">Figma, flows, testing</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" style="margin:10px 0 0">
+    <div class="logos">
+      <div class="logo">TCS</div>
+      <div class="logo">ZOHO</div>
+      <div class="logo">ACCENTURE</div>
+      <div class="logo">FLIPKART</div>
+      <div class="logo">FRESHWORKS</div>
+      <div class="logo">AMAZON</div>
+    </div>
+  </div>
+
+  <section id="why" class="container">
+    <div class="stack">
+      <div class="panel card"><h3>Interactive lessons</h3><p class="muted">Bite‑sized videos, quizzes, and projects keep you engaged.</p></div>
+      <div class="panel card"><h3>Live mentor support</h3><p class="muted">Ask questions and get real‑time guidance during office hours.</p></div>
+      <div class="panel card"><h3>Career toolkit</h3><p class="muted">Mock interviews, resume review, LinkedIn upgrade.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing container">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px">
+      <h2 style="margin:0">Simple plans</h2>
+      <div class="tag" id="priceToggle" role="button" aria-pressed="false" title="Toggle one‑time / 3‑month">Billing: One‑time</div>
+    </div>
+    <div class="prices">
+      <div class="panel price">
+        <div class="tag">Starter</div>
+        <div class="amt" data-onetime="₹2,999" data-monthly="₹1,099">₹2,999</div>
+        <ul class="bullets">
+          <li>Lifetime portal access</li>
+          <li>Downloadable resources</li>
+          <li>Email support</li>
+        </ul>
+        <a class="btn" href="#enroll">Enroll — Starter</a>
+      </div>
+      <div class="panel price">
+        <div class="ribbon">Most popular</div>
+        <div class="tag">Pro</div>
+        <div class="amt" data-onetime="₹6,999" data-monthly="₹2,499">₹6,999</div>
+        <ul class="bullets">
+          <li>Everything in Starter</li>
+          <li>Weekly mentor sessions</li>
+          <li>Certificate of completion</li>
+        </ul>
+        <a class="btn" href="#enroll">Enroll — Pro</a>
+      </div>
+      <div class="panel price">
+        <div class="tag">Career+</div>
+        <div class="amt" data-onetime="₹12,999" data-monthly="₹4,499">₹12,999</div>
+        <ul class="bullets">
+          <li>Mock interviews</li>
+          <li>Resume & LinkedIn revamp</li>
+          <li>Job referrals (select)</li>
+        </ul>
+        <a class="btn" href="#enroll">Enroll — Career+</a>
+      </div>
+    </div>
+    <div class="cta-band panel cta-inner">
+      <div>
+        <h3 style="margin:6px 0">Unsure which course fits?</h3>
+        <p class="muted" style="margin:0">Get a customised path based on your goals.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" id="openLead2">Get Counsellor Call</button>
+        <a class="btn ghost" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" aria-labelledby="testi">
+    <h2 id="testi">What learners say</h2>
+    <div class="panel slider" style="margin-top:8px">
+      <div class="slides" id="slides">
+        <div class="testi">
+          <p>“The mentor feedback was a game changer. I landed my first data role within a month.”</p>
+          <p class="muted">— Priya S. • Pro Track (Data Science)</p>
+        </div>
+        <div class="testi">
+          <p>“Short, intense and practical. The projects went straight into my portfolio.”</p>
+          <p class="muted">— Arjun K. • AI Fundamentals</p>
+        </div>
+        <div class="testi">
+          <p>“Clear roadmap + interview prep. DKEDU made it click for me.”</p>
+          <p class="muted">— Sana M. • Career+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="container" style="margin-top:16px">
+    <h2>FAQ</h2>
+    <details><summary>How do I enroll?</summary><p>Click any Enroll button and fill the lead form. We’ll confirm your seat and payment options.</p></details>
+    <details><summary>Do you provide certificates?</summary><p>Yes, complete the assessments and final project to earn a DKEDU course certificate.</p></details>
+    <details><summary>What is the refund policy?</summary><p>7‑day refund window from purchase (terms apply).</p></details>
+    <details><summary>Live support timings?</summary><p>Mon–Sat, 09:00–18:00 IST via support portal & WhatsApp.</p></details>
+  </section>
+
+  <section id="contact" class="container" style="margin-top:16px">
+    <div class="panel" style="padding:18px">
+      <h2>Contact</h2>
+      <p class="muted">admissions@dkedu.com • +91‑98765‑43210 • Chennai, India</p>
+      <p><a class="btn ghost" href="https://desk.zoho.com/portal/dkedu" target="_blank" rel="noreferrer">Open Support Portal</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div>
+        <div class="brand"><div class="logo"></div> DKEDU</div>
+        <p class="muted">Outcome‑focused learning for modern careers.</p>
+      </div>
+      <div>
+        <strong>Quick Links</strong>
+        <div><a href="#courses">Courses</a></div>
+        <div><a href="#pricing">Pricing</a></div>
+        <div><a href="#faq">FAQ</a></div>
+      </div>
+      <div>
+        <strong>Legal</strong>
+        <div><a href="#">Terms</a></div>
+        <div><a href="#">Privacy</a></div>
+        <div class="muted">© <span id="yr"></span> DKEDU</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky bar -->
+  <div class="stickybar container">
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <div class="online" id="supportBadge2"><span class="dot"></span><span>Support status…</span></div>
+      <div class="tag" id="coupon">Coupon DKEDU20 applied at checkout</div>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" href="#enroll">Enroll Now</a>
+      <button class="btn ghost" id="openLead3">Get Syllabus</button>
+    </div>
+  </div>
+
+  <!-- Lead modal (Zoho integration ready) -->
+  <div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle">
+    <div class="box">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <h3 id="leadTitle" style="margin:0">Get the course syllabus</h3>
+        <button class="close" id="closeLead">Close</button>
+      </div>
+      <p class="muted" style="margin:6px 0 12px">Enter your details and we’ll email the PDF + next cohort dates.</p>
+      <form id="leadForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div><label>Name</label><input name="name" required></div>
+          <div><label>Email</label><input type="email" name="email" required></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px">
+          <div><label>Phone (WhatsApp)</label><input name="phone" placeholder="+91..."></div>
+          <div><label>Course</label>
+            <select name="course">
+              <option>AI Fundamentals</option>
+              <option>Data Science</option>
+              <option>Digital Marketing</option>
+              <option>UI/UX</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:10px"><label>Goal</label><textarea name="goal" placeholder="Switch to data analyst / promotion / freelance ..."></textarea></div>
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <button class="btn" type="submit">Email me the PDF</button>
+          <a class="btn ghost" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+        </div>
+        <p class="muted" style="font-size:12px;margin-top:8px">We’ll also send cohort reminders. Unsubscribe anytime.</p>
+      </form>
+      <div id="leadSuccess" style="display:none;margin-top:10px" class="tag">Thanks! Check your inbox for the syllabus.</div>
+    </div>
+  </div>
+
+  <script>
+    // ===== Config (edit these) =====
+    const COHORT_START = new Date("2025-09-15T09:00:00+05:30");
+    const BUSINESS_HOURS = { days:[1,2,3,4,5,6], start:9, end:18 }; // Mon–Sat 9–18 IST
+    let monthly = false; // pricing toggle state
+
+    // ===== Live IST clock =====
+    const fmt = n=> String(n).padStart(2,'0');
+    const clockEl = document.getElementById('clock');
+    function tickClock(){
+      const now = new Date();
+      // Convert to IST without libs
+      const istOffset = 330; // minutes
+      const utc = now.getTime() + (now.getTimezoneOffset()*60000);
+      const ist = new Date(utc + istOffset*60000);
+      clockEl.textContent = `IST — ${fmt(ist.getHours())}:${fmt(ist.getMinutes())}`;
+    }
+    setInterval(tickClock, 1000); tickClock();
+
+    // ===== Countdown =====
+    const cd = document.getElementById('countdown');
+    const cohortEl = document.getElementById('cohortDate');
+    function tickCountdown(){
+      const now = new Date();
+      const diff = COHORT_START - now;
+      if(diff<=0){cd.textContent='Started'; return}
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor(diff%86400000/3600000);
+      const m = Math.floor(diff%3600000/60000);
+      const s = Math.floor(diff%60000/1000);
+      cd.textContent = `${fmt(d)}d : ${fmt(h)}h : ${fmt(m)}m : ${fmt(s)}s`;
+    }
+    setInterval(tickCountdown, 1000); tickCountdown();
+    cohortEl.textContent = COHORT_START.toLocaleString('en-IN',{ timeZone:'Asia/Kolkata', dateStyle:'full', timeStyle:'short' });
+
+    // ===== Support status (online if within business hours IST) =====
+    function supportOnline(){
+      const now = new Date();
+      const istOffset = 330; const utc = now.getTime() + now.getTimezoneOffset()*60000; const ist = new Date(utc + istOffset*60000);
+      const day = ist.getDay(); const hr = ist.getHours();
+      const isDay = BUSINESS_HOURS.days.includes(day);
+      const isHour = hr >= BUSINESS_HOURS.start && hr < BUSINESS_HOURS.end;
+      return isDay && isHour;
+    }
+    function setSupportBadges(){
+      const online = supportOnline();
+      const el1 = document.getElementById('supportBadge');
+      const el2 = document.getElementById('supportBadge2');
+      [el1,el2].forEach(el=>{ if(!el) return; el.querySelector('span:last-child').textContent = online? 'Online now' : 'Offline'; el.style.opacity = online? 1: .7; });
+    }
+    setInterval(setSupportBadges, 60000); setSupportBadges();
+
+    // ===== Random seats left (for demo) =====
+    const seatsEl = document.getElementById('seats');
+    function setSeats(){ seatsEl.textContent = 12 + Math.floor(Math.random()*9); }
+    setSeats();
+
+    // ===== Testimonials slider =====
+    const slides = document.getElementById('slides'); let idx = 0;
+    setInterval(()=>{ idx = (idx+1)%3; slides.style.transform = `translateX(-${idx*100}%)`; }, 3500);
+
+    // ===== Pricing toggle =====
+    const toggle = document.getElementById('priceToggle');
+    const amts = document.querySelectorAll('.amt');
+    toggle.addEventListener('click', ()=>{
+      monthly = !monthly; toggle.textContent = monthly? 'Billing: 3‑month' : 'Billing: One‑time';
+      amts.forEach(a=> a.textContent = monthly? a.dataset.monthly : a.dataset.onetime);
+    });
+
+    // ===== Lead modal (simulate submit; replace with Zoho form) =====
+    const modal = document.getElementById('leadModal');
+    const openers = ['openLead','openLead2','openLead3'].map(id=>document.getElementById(id));
+    const closeBtn = document.getElementById('closeLead');
+    const form = document.getElementById('leadForm');
+    const success = document.getElementById('leadSuccess');
+
+    openers.forEach(btn=> btn && btn.addEventListener('click', ()=>{ modal.style.display='flex'; }));
+    closeBtn.addEventListener('click', ()=> modal.style.display='none');
+    modal.addEventListener('click', (e)=>{ if(e.target===modal) modal.style.display='none'; });
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      success.style.display='inline-block';
+      // TODO: Replace with Zoho Webform embed or fetch() to your endpoint
+      // Example (Zoho Forms): paste embed snippet here and remove this JS submit handler
+      setTimeout(()=>{ modal.style.display='none'; form.reset(); success.style.display='none'; }, 1500);
+    });
+
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+  <!-- Optional: paste Zoho SalesIQ / Analytics here -->
+</body>
+</html>
