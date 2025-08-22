@@ -1,0 +1,76 @@
+{
+  "main": [
+    {
+      "name": "NEET + AIIMS Combo Batch",
+      "price": 149000,
+      "code": "PRCD129"
+    },
+    {
+      "name": "JEE Main + Advanced Batch",
+      "price": 72000,
+      "code": "PRCD116"
+    },
+    {
+      "name": "NEET Long-Term Batch",
+      "price": 65000,
+      "code": "PRCD115"
+    },
+    {
+      "name": "Crash Course – NEET",
+      "price": 18000,
+      "code": "PRCD117"
+    },
+    {
+      "name": "Repeaters Batch – NEET",
+      "price": 52000,
+      "code": "PRCD119"
+    },
+    {
+      "name": "IIT Foundation (8th–10th)",
+      "price": 25000,
+      "code": "PRCD120"
+    }
+  ],
+  "addons": [
+    {
+      "name": "Scholarship Deduction",
+      "price": -10000,
+      "code": "PRCD128"
+    },
+    {
+      "name": "Early Bird Discount",
+      "price": -5000,
+      "code": "PRCD127"
+    },
+    {
+      "name": "Extra Lab Hours",
+      "price": 2000,
+      "code": "PRCD126"
+    },
+    {
+      "name": "One-on-One Mentorship",
+      "price": 5000,
+      "code": "PRCD125"
+    },
+    {
+      "name": "Study Materials",
+      "price": 3000,
+      "code": "PRCD124"
+    },
+    {
+      "name": "Hostel Accommodation",
+      "price": 8000,
+      "code": "PRCD123"
+    },
+    {
+      "name": "Online Live Classes – NEET",
+      "price": 45000,
+      "code": "PRCD122"
+    },
+    {
+      "name": "Counseling Session",
+      "price": 500,
+      "code": "PRCD121"
+    }
+  ]
+}
